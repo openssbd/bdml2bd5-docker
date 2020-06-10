@@ -1,0 +1,13 @@
+--- makefile	2017-10-05 00:22:18.000000000 +0000
++++ makefile.Debian	2020-06-10 05:18:59.590286671 +0000
+@@ -3,7 +3,8 @@ root := $(XSD_ROOT)/examples
+ include $(root)/build/cxx/rules.make
+ include $(root)/build/xsd/tree-rules.make
+ 
+-override LIBS += -lhdf5 -lhdf5_cpp
++override CPPFLAGS += -I/usr/include/hdf5/serial
++override LIBS += -lhdf5 -lhdf5_cpp -L/usr/lib/x86_64-linux-gnu/hdf5/serial
+ 
+ # Build.
+ #
+ 
