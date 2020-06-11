@@ -13,11 +13,11 @@ When you put "xxxxxxxx.bdml0.18.xml" to "bdml2bd5-docker/bdmls" folder,
 
 ```
 $ cd bdml2bd5-docker
-$ docker run -it -v bdmls:/root/bdmls bdml2bd5-docker
+$ docker run -it -v $(pwd)/bdmls:/root/bdmls bdml2bd5-docker
 
 (on docker)# cd bdmls
 
-(on docker)# ../bdml2bd5/bdml2bd5 xxxxxxxx.bdml0.18.xml
+(on docker)# ../bdml2bd5v018/bdml2bd5 xxxxxxxx.bdml0.18.xml
 (dataset name)
 (number of dataset)
 finish to set data
@@ -36,7 +36,7 @@ $ cd bdmls
 $ wget http://ssbd.qbic.riken.jp/data/bdml/Ce_ZB/081505_L1.bdml0.18.xml
 $ cd ..
 
-$ docker run -it -v bdmls:/root/bdmls bdml2bd5-docker
+$ docker run -it -v $(pwd)/bdmls:/root/bdmls bdml2bd5-docker
 
 (on docker)# cd bdmls
 
