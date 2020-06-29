@@ -17,7 +17,7 @@ $ docker run -it -v $(pwd)/bdmls:/root/bdmls bdml2bd5-docker
 
 (on docker)# cd bdmls
 
-(on docker)# ../bdml2bd5v018/bdml2bd5 xxxxxxxx.bdml0.18.xml
+(on docker)# ../BDML2BD5/bdml2bd5 xxxxxxxx.bdml0.18.xml
 (dataset name)
 (number of dataset)
 finish to set data
@@ -40,7 +40,7 @@ $ docker run -it -v $(pwd)/bdmls:/root/bdmls bdml2bd5-docker
 
 (on docker)# cd bdmls
 
-(on docker)# ../bdml2bd5v018/bdml2bd5 081505_L1.bdml0.18.xml
+(on docker)# ../BDML2BD5/bdml2bd5 081505_L1.bdml0.18.xml
 081505_L1
 1
 finish to set data

@@ -22,12 +22,11 @@ ENV XSD_ROOT /usr/share/doc/xsdcxx
 # install HDF5 library
 RUN apt-get -y install libhdf5-dev
 
-# get bdml2bd5 source code, and patch it for compile on Debian
-RUN apt-get -y install wget unzip
-RUN wget http://ssbd.qbic.riken.jp/tools/bdml2bd5v018.zip
-RUN unzip -x bdml2bd5v018.zip
+# get bdml2bd5 from GitHub, and patch it for compile on Debian
+RUN apt-get -y install git
+RUN git clone https://github.com/openssbd/BDML2BD5.git
 
-WORKDIR /root/bdml2bd5v018
+WORKDIR /root/BDML2BD5
 COPY makefile.patch .
 RUN patch -o makefile.Debian < makefile.patch
 RUN make -f makefile.Debian
